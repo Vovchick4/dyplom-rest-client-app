@@ -1,0 +1,19 @@
+.content {
+  position: fixed;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  z-index: 100;
+}
+
+.absolute_content {
+  composes: content;
+  position: absolute;
+}
+
+.dimmer {
+  position: fixed;
+  inset: 0;
+  background-color: var(--dimmer-bg-color);
+  z-index: 99;
+}

@@ -1,0 +1,43 @@
+.grid_content {
+  display: grid;
+  grid-template-columns: repeat(1, 1fr);
+}
+
+.container_total {
+  display: flex;
+  justify-content: space-between;
+  font-size: 16px;
+  margin-top: 20px;
+}
+
+.total {
+  color: var(--text-grey-color);
+  font-weight: 400;
+}
+
+.price {
+  color: var(--text-color);
+  font-weight: 700;
+}
+
+.form {
+  margin-top: 50px;
+}
+
+.submitBtn {
+  display: block;
+  width: 100%;
+}
+
+@media (min-width: 834px) {
+  .grid_content {
+    grid-template-columns: repeat(2, 1fr);
+    row-gap: 16px;
+  }
+}
+
+@media (min-width: 1200px) {
+  .grid_content {
+    grid-template-columns: repeat(4, 1fr);
+  }
+}

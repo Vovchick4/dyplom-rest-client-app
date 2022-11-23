@@ -1,0 +1,29 @@
+.grid_content {
+  display: grid;
+  grid-template-columns: repeat(1, 1fr);
+}
+
+.link_order {
+  text-decoration: none;
+}
+
+.content_button {
+  position: fixed;
+  bottom: 30px;
+  left: 16px;
+  right: 16px;
+}
+
+@media (min-width: 834px) {
+  .grid_content {
+    grid-template-columns: repeat(2, 1fr);
+    gap: 16px;
+  }
+}
+
+@media (min-width: 1200px) {
+  .grid_content {
+    grid-template-columns: repeat(3, 1fr);
+    gap: 16px;
+  }
+}

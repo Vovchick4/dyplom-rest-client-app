@@ -1,0 +1,43 @@
+.card {
+  display: flex;
+  justify-content: space-between;
+  column-gap: 18px;
+  border-bottom: 1px solid var(--border-light-grey-color);
+  padding: 30px 0;
+  text-decoration: none;
+  color: inherit;
+}
+
+.title {
+  display: block;
+  font-size: 16px;
+  font-weight: 700;
+  margin-bottom: 9px;
+}
+
+.weight {
+  display: block;
+  font-size: 14px;
+  color: var(--text-grey-color);
+  margin-bottom: 7px;
+}
+
+.ingredients {
+  display: block;
+  font-size: 14px;
+  color: var(--text-grey-color);
+  margin-bottom: 7px;
+}
+
+.price {
+  display: block;
+  font-size: 16px;
+}
+
+.image {
+  width: 100px;
+  height: 100px;
+  object-fit: cover;
+  object-position: center;
+  border-radius: 50%;
+}

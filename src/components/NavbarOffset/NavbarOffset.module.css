@@ -1,0 +1,11 @@
+.default {
+  margin-top: 42px;
+}
+
+.tall {
+  margin-top: 104px;
+}
+
+.none {
+  margin-top: 0;
+}

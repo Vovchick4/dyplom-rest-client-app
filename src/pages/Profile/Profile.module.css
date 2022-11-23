@@ -1,0 +1,68 @@
+.wrapper {
+  display: flex;
+  flex-direction: column;
+  min-height: 90vh;
+}
+
+.input_icon {
+  color: var(--text-grey-color);
+  pointer-events: none;
+}
+
+.link_paymethod {
+  margin-bottom: 30px !important;
+  color: var(--text-grey-color) !important;
+  background-color: var(--input-bg-dark-color) !important;
+  font-weight: 400 !important;
+  display: flex;
+  width: 100%;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.link_paymethod_left {
+  display: flex;
+  align-items: center;
+}
+
+.link_paymethod_icon {
+  margin-right: 20px;
+  font-size: 20px;
+}
+
+.link_paymethod_label {
+  color: var(--text-dark-color);
+}
+
+.credit_card_icon {
+  font-size: 18px;
+  margin-right: 20px;
+}
+
+.arrow_icon {
+  transform: rotate(180deg);
+}
+
+.exit_button {
+  background-color: var(--red-light-color) !important;
+  color: var(--red-color) !important;
+  font-weight: 400 !important;
+  display: flex;
+  align-items: center;
+  width: 100%;
+}
+
+.exit_icon {
+  font-size: 18px;
+  margin-right: 20px;
+  font-size: 20px;
+}
+
+.exit_label {
+  margin-top: 3px;
+}
+
+.confirm_button {
+  margin-top: auto;
+  margin: auto 16px 0px;
+}

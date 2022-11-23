@@ -1,0 +1,91 @@
+.container {
+  z-index: 96;
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background-color: var(--bg-light-color);
+  max-height: 100vh;
+}
+
+.searchbar {
+  background-color: var(--bg-light-color);
+  box-shadow: 0 6px 12px var(--shadow-color);
+  transform: translateZ(100px);
+}
+
+.content {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  column-gap: 8px;
+  width: 100%;
+  padding: 12px 17px;
+}
+
+.inputBox {
+  display: flex;
+  align-items: center;
+}
+
+.searchIcon {
+  color: var(--text-grey-color);
+}
+
+.input {
+  border: none;
+  font-size: 18px;
+  color: var(--text-dark-color);
+  background-color: transparent;
+  border-bottom: 1px solid transparent;
+  margin-right: 8px;
+  width: 100%;
+}
+
+.input:focus {
+  outline: none;
+}
+
+.input::-webkit-search-cancel-button {
+  display: none;
+}
+
+.clearButton {
+  background-color: transparent;
+  border: none;
+  cursor: pointer;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 24px;
+  height: 24px;
+  background-color: var(--text-grey-color);
+  border-radius: 50%;
+  color: var(--white-color);
+}
+
+.cancelButton {
+  background-color: transparent;
+  border: none;
+  cursor: pointer;
+  font-size: 14px;
+  color: var(--text-dark-color);
+}
+
+.scrollable {
+  max-height: 100vh;
+}
+
+.results {
+  padding-top: 20px;
+  padding-left: 16px;
+  padding-right: 16px;
+  height: calc(100% - 48px);
+  overflow-y: auto;
+}
+
+.resultCard {
+  padding: 12px 16px;
+  background-color: thistle;
+}

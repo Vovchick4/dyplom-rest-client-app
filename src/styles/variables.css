@@ -1,0 +1,25 @@
+:root {
+  --success-color: #589442;
+  --dark-success-color: #386b26;
+  --main-lighter-color: #eef4ec;
+  --main-darker-color: #6ca159;
+  --input-bg-color: #f4f5f6;
+  --input-border-color: #d1dfe2;
+  --input-bg-dark-color: #e9e8e7;
+  --bg-color: #000000;
+  --bg-light-color: #f9f8f7;
+  --text-color: #000000;
+  --text-grey-color: #979797;
+  --text-dark-color: #323232;
+  --border-light-grey-color: rgba(151, 151, 151, 0.2);
+  --white-color: #ffffff;
+  --navbar-border-color: #e8e8e8;
+  --facebook-color: #2178ef;
+  --twitter-color: #3fbafc;
+  --red-color: #d54747;
+  --red-light-color: rgba(213, 71, 71, 0.1);
+  --shadow-color: rgba(213, 207, 201, 0.6);
+  --menu-card-bg-color: #e9eee5;
+  --border-color: rgba(151, 151, 151, 0.4);
+  --dimmer-bg-color: rgba(0, 0, 0, 0.75);
+}

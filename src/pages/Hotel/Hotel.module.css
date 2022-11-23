@@ -1,0 +1,68 @@
+.grid_content {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 16px;
+}
+
+.waiterButtons {
+  display: flex;
+  justify-content: space-around;
+  margin-bottom: 40px;
+}
+
+.content_button {
+  position: fixed;
+  bottom: 30px;
+  left: 16px;
+  right: 16px;
+}
+
+.textPrice {
+  font-size: 16px;
+  font-weight: 400;
+}
+
+.container_basket_price {
+  display: flex;
+  align-items: center;
+}
+
+.GrBasketIcon {
+  font-size: 24px;
+  margin-right: 8px;
+  color: var(--dark-main-color);
+}
+
+.textCount {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 28px;
+  height: 28px;
+  font-size: 14px;
+  background-color: var(--dark-main-color);
+  border-radius: 50%;
+  font-weight: 400;
+}
+
+.textOrder {
+  text-transform: capitalize;
+}
+
+@media (min-width: 620px) {
+  .grid_content {
+    grid-template-columns: repeat(3, 1fr);
+  }
+}
+
+@media (min-width: 834px) {
+  .grid_content {
+    grid-template-columns: repeat(5, 1fr);
+  }
+}
+
+@media (min-width: 1200px) {
+  .grid_content {
+    grid-template-columns: repeat(6, 1fr);
+  }
+}

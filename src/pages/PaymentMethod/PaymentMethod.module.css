@@ -1,0 +1,53 @@
+.wrapper {
+  display: flex;
+  flex-direction: column;
+  min-height: 90vh;
+}
+
+.link_paymethod {
+  margin-bottom: 30px !important;
+  color: var(--text-dark-color) !important;
+  background-color: var(--input-bg-dark-color) !important;
+  font-weight: 400 !important;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  width: 100%;
+}
+
+.pay_method_button_title {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.credit_card_icon {
+  display: flex;
+  align-items: center;
+  font-size: 24px;
+  margin-right: 8px;
+}
+
+.arrow_icon {
+  font-size: 18px;
+  transform: rotate(180deg);
+}
+
+.save_button {
+  margin: auto 16px 0;
+}
+
+.select_content_approve {
+  background-color: var(--main-color);
+  border-radius: 50%;
+  width: 24px;
+  height: 24px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.select_approve {
+  color: var(--white-color);
+  font-size: 24px;
+}

@@ -1,0 +1,15 @@
+.wrapper {
+  display: flex;
+  flex-direction: column;
+  min-height: 90vh;
+}
+
+.form_row {
+  display: flex;
+  column-gap: 16px;
+}
+
+.add_card {
+  margin-top: auto;
+  padding: 20px 16px;
+}

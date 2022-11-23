@@ -1,0 +1,76 @@
+.container {
+  width: 100%;
+}
+
+.field {
+  position: relative;
+}
+
+.input {
+  display: block;
+  width: 100%;
+  padding: 18px 20px;
+  border-radius: 10px;
+  border: 1px solid transparent;
+
+  background-color: var(--input-bg-dark-color);
+  color: var(--text-dark-color);
+  font-size: 16px;
+}
+
+textarea.input {
+  font-family: inherit;
+  resize: vertical;
+}
+
+.input::placeholder {
+  color: var(--text-grey-color);
+  font-family: inherit;
+}
+
+.input:focus {
+  outline: none;
+  border-color: var(--success-color);
+}
+
+.input.inputError {
+  border-color: var(--red-color);
+}
+
+.input.leftAdornmentVisible {
+  padding-left: 60px;
+}
+
+.input.rightAdornmentVisible {
+  padding-right: 60px;
+}
+
+.adornment {
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+  width: 24px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.adornment img {
+  display: block;
+}
+
+.leftAdornment {
+  composes: adornment;
+  left: 20px;
+}
+
+.rightAdornment {
+  composes: adornment;
+  right: 20px;
+}
+
+.error {
+  color: var(--red-color);
+  margin-top: 2px;
+  margin-left: 4px;
+}

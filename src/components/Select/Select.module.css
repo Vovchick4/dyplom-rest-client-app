@@ -1,0 +1,72 @@
+.container {
+  display: block;
+  width: 100%;
+  position: relative;
+  border: 1px solid var(--input-bg-color);
+  border-radius: 10px;
+
+  background-color: var(--input-bg-dark-color);
+  color: var(--text-color);
+
+  font-size: 16px;
+}
+
+.defaultOption {
+  position: relative;
+  display: block;
+  width: 100%;
+  padding: 18px 20px;
+  border: none;
+  text-align-last: left;
+  background-color: transparent;
+  cursor: pointer;
+}
+
+.dropdownIcon {
+  position: absolute;
+  top: 50%;
+  right: 20px;
+  transform: translateY(-50%) rotate(-90deg);
+  width: 24px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.dropdownIconActive {
+  composes: dropdownIcon;
+  transform: translateY(-50%) rotate(90deg);
+}
+
+.options {
+  display: block;
+}
+
+.optionItem {
+  border-top: 1px solid var(--border-color);
+}
+
+.optionBtn {
+  composes: defaultOption;
+}
+
+.optionBtnChecked {
+  composes: optionBtn;
+  padding-right: 60px;
+}
+
+.check {
+  position: absolute;
+  top: 50%;
+  right: 20px;
+  transform: translateY(-50%);
+
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 24px;
+  height: 24px;
+  border-radius: 50%;
+
+  background-color: var(--main-color);
+}

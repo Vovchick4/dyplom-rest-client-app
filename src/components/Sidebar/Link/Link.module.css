@@ -1,0 +1,19 @@
+.link {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 26px 16px;
+  color: var(--white-color);
+  font-size: 16px;
+  font-weight: 400;
+  text-decoration: none;
+  border: none;
+  width: 100%;
+  border-top: 1px solid var(--main-darker-color);
+  background-color: transparent;
+  cursor: pointer;
+}
+
+.link:last-child {
+  border-bottom: 1px solid var(--main-darker-color);
+}

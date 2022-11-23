@@ -1,0 +1,31 @@
+.sidebar {
+  width: 285px;
+  background-color: var(--main-color);
+  position: fixed;
+  left: 0;
+  top: 0;
+  bottom: 0;
+  z-index: 100;
+  overflow-y: auto;
+}
+
+.dimmer {
+  background-color: rgba(0, 0, 0, 0.7);
+  position: fixed;
+  top: 0;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  transition: transform 100ms linear;
+  z-index: 99;
+}
+
+.logoBox {
+  padding: 70px 16px 50px;
+  display: flex;
+  justify-content: center;
+}
+
+.logo {
+  width: 90%;
+}

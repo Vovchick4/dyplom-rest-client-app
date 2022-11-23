@@ -1,0 +1,75 @@
+.alert_content {
+  display: flex;
+  justify-content: flex-end;
+  margin-top: 8px;
+  gap: 8px;
+}
+
+.card {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 20px 0;
+  border-bottom: 1px solid var(--border-color);
+}
+
+.card_count {
+  color: var(--text-color);
+  font-size: 16px;
+  font-weight: 700;
+}
+
+.card_title {
+  color: var(--text-grey-color);
+  font-weight: 400;
+  margin-left: 15px;
+}
+
+.card_price {
+  color: var(--text-color);
+  font-size: 16px;
+  font-weight: 400;
+}
+
+.countControlsBox {
+  margin-top: 15px;
+  display: flex;
+}
+
+.card_button {
+  background: none;
+  border: none;
+  color: var(--text-grey-color);
+  border: 1px solid var(--input-bg-dark-color);
+  background-color: var(--white-color);
+  cursor: pointer;
+  padding: 0;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 28px;
+  height: 28px;
+  border-radius: 50%;
+  font-size: 14px;
+}
+
+.card_button:disabled {
+  cursor: default;
+  background-color: var(--input-bg-dark-color);
+}
+
+.card_button:not(:last-child) {
+  margin-right: 18px;
+}
+
+.card_button_trash {
+  border: none;
+  background-color: transparent;
+  cursor: pointer;
+  color: var(--red-color);
+  margin: 16px 0 0 0;
+  padding: 0;
+  display: flex;
+  justify-content: flex-end;
+  width: 100%;
+}
