@@ -1,3 +1,4 @@
+import axios from 'axios';
 import { useContext, useEffect } from 'react';
 import { useParams } from 'react-router-dom';
 import { useDispatch, useSelector } from 'react-redux';
@@ -17,12 +18,15 @@ import HotelCard from './HotelCard';
 import { hotelOperations, hotelSelectors } from '../../redux/hotel';
 import { orderSelectors } from '../../redux/order';
 import urls from '../../config/urls';
+import { getErrorMessage } from '../../utils/getErrorMessage';
+import { authSelectors } from '../../redux/auth';
 
 export default function HotelPage() {
   const { categories, setSearchVisible } = useContext(NavbarContext);
   const { hotelSlug } = useParams();
 
   const dispatch = useDispatch();
+  const user = useSelector(authSelectors.getUser);
   const hotel = useSelector(hotelSelectors.getHotel);
   const isCallWaiter =
     hotel?.settings === null ? true : hotel?.settings.callWaiter;
@@ -47,11 +51,39 @@ export default function HotelPage() {
   }, [dispatch, hotelSlug, i18n.language]);
 
   function callWaiter() {
-    toast('The waiter is called');
+    const data = {
+      table_number: Number(sessionStorage.getItem('tableNumber')),
+      rest_id: hotel.id,
+      category: 'waiter',
+    };
+    if (user !== null) {
+      data['client_id'] = user.id;
+    }
+    axios({
+      url: 'tables',
+      method: 'POST',
+      data,
+    })
+      .then((res) => toast('The waiter is called'))
+      .catch((err) => toast.error(getErrorMessage(err)));
   }
 
   function leaveTable() {
-    toast('Bill was asked');
+    const data = {
+      table_number: Number(sessionStorage.getItem('tableNumber')),
+      rest_id: hotel.id,
+      category: 'bill_request',
+    };
+    if (user !== null) {
+      data['client_id'] = user.id;
+    }
+    axios({
+      url: 'tables',
+      method: 'POST',
+      data,
+    })
+      .then((res) => toast('Bill was asked'))
+      .catch((err) => toast.error(getErrorMessage(err)));
   }
 
   return (
