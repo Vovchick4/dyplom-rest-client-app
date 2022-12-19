@@ -3,7 +3,7 @@ const urls = {
   signup: '/signup',
   login: '/login',
   cart: '/cart',
-  hotel: '/hotel',
+  hotel: '/restaurant',
   menu: '/menu',
   profile: '/profile',
   paymentMethod: '/payment-method',

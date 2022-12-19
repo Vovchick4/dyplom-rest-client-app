@@ -53,8 +53,10 @@ html {
 
 .blue-theme {
   --main-color: var(--facebook-color);
+  --dark-main-color: var(--dark-main-facebook-color);
 }
 
 .red-theme {
   --main-color: var(--red-color);
+  --dark-main-color: var(--dark-main-red-color);
 }
