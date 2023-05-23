@@ -81,11 +81,18 @@ export default function CartPage() {
       is_online_payment: 1,
       url: '',
     },
+    // {
+    //   value: paymentMethod.Card,
+    //   name: 'Card',
+    //   render: true,
+    //   is_online_payment: 1,
+    //   url: '',
+    // },
     {
-      value: paymentMethod.Card,
-      name: 'Card',
+      value: paymentMethod.Cash,
+      name: 'Cash',
       render: true,
-      is_online_payment: 1,
+      is_online_payment: 0,
       url: '',
     },
   ];
@@ -260,7 +267,7 @@ export default function CartPage() {
               />
             </FormRow>
 
-            {formik.values.paymentMethod.url && (
+            {/* {formik.values.paymentMethod.url && (
               <iframe
                 src={formik.values.paymentMethod.url}
                 title={formik.values.paymentMethod.name}
@@ -270,7 +277,7 @@ export default function CartPage() {
                   height: 80,
                 }}
               />
-            )}
+            )} */}
 
             <Button type="submit" className={styles.submitBtn}>
               {t('Confirm')}

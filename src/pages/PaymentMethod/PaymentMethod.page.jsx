@@ -51,12 +51,12 @@ export default function PaymentMethodPage() {
       name: 'PayPal',
       render: hotel?.settings === null ? true : hotel?.settings.paypal,
     },
-    {
-      value: paymentMethod.Card,
-      img: <SiMastercard />,
-      name: 'Card',
-      render: true,
-    },
+    // {
+    //   value: paymentMethod.Card,
+    //   img: <SiMastercard />,
+    //   name: 'Card',
+    //   render: true,
+    // },
     {
       value: paymentMethod.Cash,
       img: <img src={cardCashGreenIcon} height="24" alt="cardCashGreenkIcon" />,
