@@ -29,9 +29,9 @@ export default function HotelPage() {
   const user = useSelector(authSelectors.getUser);
   const hotel = useSelector(hotelSelectors.getHotel);
   const isCallWaiter =
-    hotel?.settings === null ? true : hotel?.settings.callWaiter;
+    hotel?.settings === null ? true : hotel?.settings?.callWaiter;
   const isLeaveTable =
-    hotel?.settings === null ? true : hotel?.settings.billRequest;
+    hotel?.settings === null ? true : hotel?.settings?.billRequest;
   const hotelLoading = useSelector(hotelSelectors.getLoading);
   const totalAmount = useSelector(orderSelectors.getTotalAmount);
   const totalPrice = useSelector(orderSelectors.getTotalPrice);

@@ -33,12 +33,16 @@ const validationSchema = Yup.object().shape({
     .trim()
     .max(255, 'Name must be at most 255 characters')
     .required('Name is required'),
-  person_quantity: Yup.number('Person quantity must be a number')
-    .min(1, 'Person quantity must be at least 1')
-    .required('Person quantity is required'),
-  people_for_quantity: Yup.number('People for quantity must be a number')
-    .min(1, 'People for quantity must be at least 1')
-    .required('People for quantity is required'),
+  person_quantity: Yup.number('Person quantity must be a number').min(
+    1,
+    'Person quantity must be at least 1'
+  ),
+  // .required('Person quantity is required'),
+  people_for_quantity: Yup.number('People for quantity must be a number').min(
+    1,
+    'People for quantity must be at least 1'
+  ),
+  // .required('People for quantity is required'),
 });
 
 export default function CartPage() {
@@ -99,8 +103,8 @@ export default function CartPage() {
   const formik = useFormik({
     initialValues: {
       name: '',
-      person_quantity: '',
-      people_for_quantity: '',
+      person_quantity: 1,
+      people_for_quantity: 1,
       is_takeaway: false,
       paymentMethod: payMethodOptions.find(
         ({ value, render }) =>
@@ -204,6 +208,40 @@ export default function CartPage() {
                 />
               </FormRow>
             )}
+
+            <FormRow>
+              <Input
+                type="number"
+                name="person_quantity"
+                placeholder={t('People for quantity is required')}
+                required
+                autoComplete="off"
+                value={formik.values.person_quantity}
+                error={
+                  formik.touched.person_quantity &&
+                  t(formik.errors.person_quantity)
+                }
+                onChange={formik.handleChange}
+                onBlur={formik.handleBlur}
+              />
+            </FormRow>
+
+            <FormRow>
+              <Input
+                type="number"
+                name="people_for_quantity"
+                placeholder={t('People for quantity is required')}
+                required
+                autoComplete="off"
+                value={formik.values.people_for_quantity}
+                error={
+                  formik.touched.people_for_quantity &&
+                  t(formik.errors.people_for_quantity)
+                }
+                onChange={formik.handleChange}
+                onBlur={formik.handleBlur}
+              />
+            </FormRow>
 
             <FormRow>
               <Checkbox

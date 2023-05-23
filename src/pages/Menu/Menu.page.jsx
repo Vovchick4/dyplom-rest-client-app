@@ -81,7 +81,7 @@ export default function MenuPage() {
     <div className={styles.content}>
       {loading && <FullPageLoader isDimmerActive />}
 
-      {!loading && plates.length > 0 && (
+      {!loading && plates && plates.length > 0 && (
         <div className={styles.grid_content}>
           {plates.map((plate) => {
             const orderItem = cart[plate.id];
