@@ -200,21 +200,21 @@ export default function CartPage() {
           </div>
 
           <form className={styles.form} onSubmit={formik.handleSubmit}>
-            {formik.values.is_takeaway && (
-              <FormRow>
-                <Input
-                  type="text"
-                  name="name"
-                  placeholder={t('Name')}
-                  required
-                  autoComplete="off"
-                  value={formik.values.name}
-                  error={formik.touched.name && t(formik.errors.name)}
-                  onChange={formik.handleChange}
-                  onBlur={formik.handleBlur}
-                />
-              </FormRow>
-            )}
+            {/* {formik.values.is_takeaway && ( */}
+            <FormRow>
+              <Input
+                type="text"
+                name="name"
+                placeholder={t('Name')}
+                required
+                autoComplete="off"
+                value={formik.values.name}
+                error={formik.touched.name && t(formik.errors.name)}
+                onChange={formik.handleChange}
+                onBlur={formik.handleBlur}
+              />
+            </FormRow>
+            {/* // )} */}
 
             <FormRow>
               <Input
